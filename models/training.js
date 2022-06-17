@@ -6,11 +6,7 @@ const trainingSchema = new mongoose.Schema({
   host: String,
   date: String,
   status: String,
-  participants: [
-    {
-      login: String,
-    },
-  ],
+  participants: Array,
 }, {timestamps: true});
 
 

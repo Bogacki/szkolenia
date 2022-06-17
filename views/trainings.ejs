@@ -2,7 +2,9 @@
     <body>
         <%- include("nav") %>
         <div class="admin-menu">
+            <%if(loggedUser.role != "Student"){ %>
             <a href="/trainings/newTraining"><button class="btn">Add new Training</button></a>
+            <%}%>
         </div>
         <div class="main-training">
             <%trainings.forEach((training) => {%>

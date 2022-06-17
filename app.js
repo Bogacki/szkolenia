@@ -22,7 +22,7 @@ app.post("/login", loginCnt.login);
 
 app.get("/register", loginCnt.registerCheckRoute);
 
-app.post("/register", loginCnt.register).check;
+app.post("/register", loginCnt.register);
 
 app.get("/logout", loginCnt.logoutController);
 
@@ -42,6 +42,11 @@ app.get("/trainings/newTraining", trainingsCnt.newTrainingCheckRoute);
 
 app.post("/trainings/newTraining", trainingsCnt.addNewTraining);
 
+app.get("/trainings/:trainingId", trainingsCnt.trainingDetailsCheckRoute);
+
+app.get("/deleteTraining/:trainingId", trainingsCnt.deleteTraining);
+
+app.get("/signForTraining/:trainingId", trainingsCnt.signForTraining);
 
 app.listen(3000, () => {
   console.log("App is up");

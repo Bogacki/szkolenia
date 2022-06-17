@@ -1,0 +1,31 @@
+<%- include("header") %>
+    <body>
+        <%- include("nav") %>
+        <div class="main-training">
+                    <div class="training-details-container">
+                        <p>Title: <%=training.title%></p>
+                        <p>Length: <%=training.duration%> minutes</p>
+                        <p>Date: <%=training.date%></p>
+                        <p>Host: <%=training.host%></p>
+                        <ol>
+                            <%training.participants.forEach((participant)=> {%>
+                                <li><p><%=participant%></p></li>
+                            <%});%>
+                        </ol>
+                    <div>
+                        <%if (loggedUser.role != "Student"){%>
+                        <a href="/deleteTraining/<%=training._id.toString()%>"><button class="btn">Delete</button></a>
+                        <%}%>
+                        <%if (loggedUser.login != training.host){%>
+                            <%if(training.participants.filter(e => e === loggedUser.login).length > 0){%>
+                                <a href="/signForTraining/<%=training._id.toString()%>"><button class="btn">Unsign</button></a>
+                            <%}else{%>
+                                <a href="/signForTraining/<%=training._id.toString()%>"><button class="btn">Sign for</button></a>
+                            <%}%>
+                        <%}%>
+                    </div>
+                </div>
+
+        </div>
+    </body>
+</html>
