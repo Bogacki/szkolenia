@@ -1,0 +1,20 @@
+<%- include("header") %>
+    <body>
+        <%- include("nav") %>
+        <div class="admin-menu">
+            <a href="/trainings/newTraining"><button class="btn">Add new Training</button></a>
+        </div>
+        <div class="main-training">
+            <%trainings.forEach((training) => {%>
+                <a href="/trainings/<%=training._id.toString()%>">
+                    <div class="training-container">
+                        <p class="titleP"><%=training.title%></p>
+                        <p class="durationP"><%=training.duration%></p>
+                        <p class="dateP"><%=training.date%></p>
+                        <p class="hostP"><%=training.host%></p>
+                    </div>
+                </a>
+            <%})%>
+        </div>
+    </body>
+</html>

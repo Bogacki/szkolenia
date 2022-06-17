@@ -1,0 +1,23 @@
+<%- include("header") %>
+<body>
+    <div class="login-block">
+    <%- include("nav") %>
+        <div class="login-container">
+            <section class="login" id="login">
+            <header>
+                <h2>MeetDoctor</h2>
+                <h3>Sign In</h3>
+                <h4 style="color:red"><%=error%></h4>
+            </header>
+            <form class="login-form" action="#" method="post">
+                <input type="text" class="login-input" placeholder="User" name="login" required autofocus/>
+                <input type="password" class="login-input" placeholder="Password" name="password" required/>
+                <div class="submit-container">
+                <button type="submit" class="login-button">SIGN IN</button>
+                </div>
+            </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@import '_core.css';
+@import '_login.css';
+@import '_nav.css';
+@import '_panels.css';
+
+
+/** CAROUSEL HOME PAGE
+.poster-carousel-container{
+  position: relative;
+  height: 1000px;
+}
+.poster-carousel{
+  position: absolute;
+  right: 0px;
+  height: 500px;
+  width: 100%;
+  max-width: 1000px;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background-color: #6e5494;
+  display: flex;
+
+}
+
+.btn-carousel{
+border: none;
+background-color: transparent;
+}
+.btn-carousel i{
+  font-size: 60px;
+  color: #252A34;
+  }
+.btn-carousel:hover{
+  border: none;
+  background-color: rgba(0, 0, 0, 0.137255);
+}
+.btn-carousel:active{
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.btn-carousel i:active{
+  font-size: 60px;
+  }
+.poster-carousel-btn-left{
+  width: 10%;
+  height: 100%;
+}
+.poster-carousel-btn-right{
+  width: 10%;
+  height: 100%;
+  
+}
+
+.poster{
+  width: 80%;
+  height: 100%;
+}
+*/

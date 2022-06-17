@@ -1,0 +1,153 @@
+ /* NAVBAR STYLING STARTS */
+
+ .navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F5F5;
+    color: #22354b;
+    top:0px;
+    transition: top 0.5s;
+  }
+  
+  .brand-title {
+    font-size: 1.7rem;
+    margin: .5rem 3rem;
+    font-weight: 500;
+  }
+  
+  .navbar-links {
+    height: 100%;
+  }
+  
+  .navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .navbar-links li {
+    list-style: none;
+  }
+  .navbar-links li:last-child{
+    border-right: none;
+  }
+  
+  
+  .navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: #22354b;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 15px 50px;
+    transition: border-bottom 1s;
+    border-bottom: #3FC1C9 0px solid;
+  }
+  .navbar-links li::after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px #3FC1C9;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+  .navbar-links li:hover::after{
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #22354b;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .toggle-button {
+        display: flex;
+    }
+  
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+  
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+  
+    .navbar-links ul li {
+        text-align: center;
+    }
+  
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+  
+    .navbar-links.active {
+        display: flex;
+    }
+  }
+  /* Background Styles Only */
+  
+  .side-links {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  }
+  
+  .side-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: white;
+  width: 180px;
+  padding: 10px 0;
+  border-radius: 10px;
+  }
+  
+  .side-link-youtube {
+  background-color: red;
+  }
+  
+  .side-link-twitter {
+  background-color: #1DA1F2;
+  }
+  
+  .side-link-github {
+  background-color: #6e5494;
+  }
+  
+  .side-link-text {
+  margin-left: 10px;
+  font-size: 18px;
+  }
+  
+  .side-link-icon {
+  color: white;
+  font-size: 30px;
+  }
+    
